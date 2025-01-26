@@ -19,7 +19,10 @@ export default {
         "c-dark3": "#0E1323",
         "c-purple1": "#BFABDD",
         "c-purple2": "#9F81CD",
-      }
+      },
+      gridTemplateColumns: {
+        'auto-fit-minmax': 'repeat(auto-fit, minmax(200px, 1fr))',
+      },
     },
   },
   plugins: [],

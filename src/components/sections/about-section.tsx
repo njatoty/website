@@ -3,22 +3,15 @@ import { MdOutlineWorkspacePremium } from "react-icons/md"
 import { PiGraduationCapFill } from "react-icons/pi"
 import { TbJewishStar } from "react-icons/tb"
 import { BiWorld } from "react-icons/bi"
+import { MutedTitle, StrongTitle } from "../ui/heading-title"
 
 const AboutSection = ({ className }: { className?: string }) => {
     return (
         <div className={cn("w-full", className)} id='about'>
-            {/* Icône */}
-            <div className='w-full'>
-                <h1 className="sr-only">A PROPOS DE MOI</h1>
-            </div>
             <div className="grid grid-cols-3 gap-10 max-md:grid-cols-2 max-sm:grid-cols-1">
                 <div className="w-full col-span-1 max-md:col-span-2">
-                    <h1 className="my-3 text-lg uppercase text-c-gray">A PROPOS DE MOI</h1>
-
-                    <div className="max-w-fit">
-                        <h2 className="text-3xl font-bold text-c-light">Qui suis-je?</h2>
-                        <div className="w-1/3 h-1 my-4 bg-purple-500" />
-                    </div>
+                    <MutedTitle>A propos de moi</MutedTitle>
+                    <StrongTitle>Qui suis-je?</StrongTitle>
                     <p className="text-c-gray">
                         Développeur web passionné, spécialisé en solutions web innovantes. Avec une expertise en frontend et backend, je crée des expériences utilisateur fluides et performantes.
                     </p>
@@ -34,7 +27,7 @@ const AboutSection = ({ className }: { className?: string }) => {
                         </div>
                         <div className="content text-c-gray">
                             <p>
-                                Développeur Fullstack chez <a href="www.solumada.mg" target="__blank" className="font-bold">Solumada</a> depuis janvier 2022. Actuellement en poste, je contribue aux projets de l'entreprise avec expertise et professionnalisme.
+                                Développeur Fullstack chez <a href="https://www.solumada.mg" target="__blank" className="font-bold">Solumada</a> depuis janvier 2022. Actuellement en poste, je contribue aux projets de l'entreprise avec expertise et professionnalisme.
                             </p>
                         </div>
                     </div>
@@ -82,7 +75,7 @@ const AboutSection = ({ className }: { className?: string }) => {
                                 Je parle plusieurs langues, ce qui me permet de travailler dans des environnements internationaux et de collaborer avec des équipes diversifiées.
                             </p>
                             <ul className="w-full my-2">
-                                <li className="list-disc list-inside"><b>Malgache</b>: Courant</li>
+                                <li className="list-disc list-inside"><b>Malgache</b>: langue maternelle</li>
                                 <li className="list-disc list-inside"><b>Français</b>: Courant</li>
                                 <li className="list-disc list-inside"><b>Anglais</b>: Intermédiaire</li>
                             </ul>
