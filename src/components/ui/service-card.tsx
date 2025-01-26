@@ -27,7 +27,7 @@ ServiceCard.Title = ({ children }: { children: React.ReactNode }) => {
 
 ServiceCard.Body = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="flex flex-col w-full h-full px-4 py-8 -my-8 border rounded-lg border-c-dark1 bg-c-dark2 group-hover:bg-purple-950">
+        <div className="flex flex-col w-full h-full px-4 py-8 -my-8 border rounded-lg border-c-dark0 bg-c-dark2 group-hover:bg-purple-950">
             {children}
         </div>
     )
@@ -35,7 +35,7 @@ ServiceCard.Body = ({ children }: { children: React.ReactNode }) => {
 
 ServiceCard.Description = ({ children }: { children: React.ReactNode }) => {
     return (
-        <p className="px-4 text-c-gray text-pretty">{children}</p>
+        <div className="px-4 text-pretty">{children}</div>
     )
 }
 

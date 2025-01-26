@@ -1,6 +1,33 @@
+import { PropsWithChildren } from "react"
 import { cn } from "../../utils"
-import { MutedTitle, StrongTitle } from "../ui/heading-title"
+import { MutedTitle, Paragraph, StrongTitle } from "../ui/typography"
 import { CSSIcon, FireBaseIcon, HTMLIcon, JavaScriptIcon, JestIcon, JQueryIcon, MongoDBIcon, NextjsIcon, NodejsIcon, ReactjsIcon, SassIcon, TailwindcssIcon, TypeScriptIcon, ElectronIcon, PostgreSQLIcon } from "../ui/icons/dev"
+
+const skills = [
+    { Icon: ReactjsIcon, label: "React" },
+    { Icon: NextjsIcon, label: "Next.js" },
+    { Icon: ElectronIcon, label: "Electron" },
+    { Icon: NodejsIcon, label: "Nodejs" },
+    { Icon: TypeScriptIcon, label: "Typescript" },
+    { Icon: JavaScriptIcon, label: "JavaScript" },
+    { Icon: HTMLIcon, label: "HTML" },
+    { Icon: CSSIcon, label: "CSS" },
+    { Icon: TailwindcssIcon, label: "Tailwindcss" },
+    { Icon: SassIcon, label: "Sass" },
+    { Icon: PostgreSQLIcon, label: "PostgreSQL" },
+    { Icon: MongoDBIcon, label: "MongoDB" },
+    { Icon: FireBaseIcon, label: "FireBase" },
+    { Icon: JQueryIcon, label: "JQuery" },
+    { Icon: JestIcon, label: "Jest" },
+];
+
+const SkillItem = ({ children }: PropsWithChildren) => {
+    return (
+        <div className="flex items-center gap-2 p-1 text-sm border rounded-md lg:text-base border-c-dark0 bg-c-dark2 text-c-light">
+            {children}
+        </div>
+    )
+}
 
 
 const SkillSection = ({
@@ -10,74 +37,22 @@ const SkillSection = ({
 }) => {
     return (
         <div className={cn("w-full h-full", className)}>
-            <div className="w-full col-span-1 max-md:col-span-2">
+            <div className="w-full">
                 <MutedTitle>Compétences Technique</MutedTitle>
                 <StrongTitle>Quelles sont mes compétences techniques ?</StrongTitle>
-                <p className="text-c-gray">
+                <Paragraph>
                     Au fil des années, j'ai acquis une expertise dans divers langages de programmation, frameworks et outils, qui me permettent de créer des solutions performantes et innovantes. Voici un aperçu des technologies que j'utilise au quotidien :
-                </p>
+                </Paragraph>
             </div>
             <div className="grid w-full grid-cols-2 gap-4 py-6 md:grid-cols-auto-fit-minmax">
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <ReactjsIcon size={30} />
-                    <span>Reactjs</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <NextjsIcon size={30} />
-                    <span>Nextjs</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <ElectronIcon size={30} />
-                    <span>Electron</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <NodejsIcon size={30} />
-                    <span>Nodejs</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <TypeScriptIcon size={30} />
-                    <span>Typescript</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <JavaScriptIcon size={30} />
-                    <span>JavaScript</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <HTMLIcon size={30} />
-                    <span>HTML</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <CSSIcon size={30} />
-                    <span>CSS</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <TailwindcssIcon size={30} />
-                    <span>Tailwindcss</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <SassIcon size={30} />
-                    <span>Sass</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <PostgreSQLIcon size={30} />
-                    <span>PostgreSQL</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <MongoDBIcon size={30} />
-                    <span>MongoDB</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <FireBaseIcon size={30} />
-                    <span>FireBase</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <JQueryIcon size={30} />
-                    <span>JQuery</span>
-                </div>
-                <div className="flex items-center gap-2 p-1 border rounded-s-md border-c-dark1 bg-c-dark2 text-c-light">
-                    <JestIcon size={30} />
-                    <span>Jest</span>
-                </div>
+                {
+                    skills.map((skill, index) => (
+                        <SkillItem key={index}>
+                            <skill.Icon size={30} />
+                            <span>{skill.label}</span>
+                        </SkillItem>
+                    ))
+                }
             </div>
         </div>
     )

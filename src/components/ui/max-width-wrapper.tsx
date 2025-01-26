@@ -6,15 +6,16 @@ interface MaxWidthWrapperProps {
   children?: React.ReactNode;
 }
 
-const MaxWidthWrapper = ({
+const MaxWidthWrapper = React.forwardRef<HTMLDivElement, MaxWidthWrapperProps>(({
   className,
-  children
-}: MaxWidthWrapperProps) => {
+  children,
+  ...props
+}, ref) => {
   return (
-    <div className={cn('w-full max-w-7xl', className)}>
+    <div ref={ref} {...props} className={cn('w-full max-w-7xl', className)}>
       {children}
     </div>
   )
-}
+})
 
 export default MaxWidthWrapper
