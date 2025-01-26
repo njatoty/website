@@ -8,4 +8,16 @@
         @apply overflow-x-hidden;
     }
 
+    .swiper {
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 1px;
+        overscroll-behavior-inline: contain;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .swiper>* {
+        scroll-snap-align: start;
+    }
+
 }

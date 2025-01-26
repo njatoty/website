@@ -13,7 +13,7 @@ const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
             link: ""
         },
         {
-            label: "Experiences",
+            label: "Services",
             link: ""
         },
         {

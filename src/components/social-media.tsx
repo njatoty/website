@@ -1,20 +1,28 @@
 import { BsFacebook, BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
+const socialLinks = [
+    {
+        href: 'https://github.com/njatoty', icon: <BsGithub className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'GitHub'
+    },
+    { href: 'https://www.facebook.com/njatotiana.fiononana.a', icon: <BsFacebook className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'Facebook' },
+    { href: 'https://www.linkedin.com/in/njatotiana-fiononana-andriamanirisoa-a81a00265', icon: <BsLinkedin className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'LinkedIn' },
+    { href: 'https://wa.me/+2619190392', icon: <BsWhatsapp className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'WhatsApp' },
+];
 
 const SocialMedia = () => {
     return (
         <div className='flex flex-col gap-4'>
-            <a href='#' className="p-2 border rounded-lg border-c-dark1 text-c-light bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500">
-                <BsGithub className='w-6 h-6 md:w-8 md:h-8 aspect-square' />
-            </a>
-            <a href='#' className="p-2 border rounded-lg border-c-dark1 text-c-light bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500">
-                <BsFacebook className='w-6 h-6 md:w-8 md:h-8 aspect-square' />
-            </a>
-            <a href='#' className="p-2 border rounded-lg border-c-dark1 text-c-light bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500">
-                <BsLinkedin className='w-6 h-6 md:w-8 md:h-8 aspect-square' />
-            </a>
-            <a href='#' className="p-2 border rounded-lg border-c-dark1 text-c-light bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500">
-                <BsWhatsapp className='w-6 h-6 md:w-8 md:h-8 aspect-square' />
-            </a>
+            {socialLinks.map((link, index) => (
+                <a
+                    key={index}
+                    href={link.href}
+                    className="p-2 border rounded-lg border-c-dark1 text-c-light bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500"
+                    aria-label={link.name}
+                >
+                    <div className="w-6 h-6 md:w-8 md:h-8 aspect-square">
+                        {link.icon}
+                    </div>
+                </a>
+            ))}
         </div>
     )
 }

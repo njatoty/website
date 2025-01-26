@@ -10,7 +10,7 @@ const GradientButton = ({
     Icon?: React.ComponentType<IconBaseProps>
 }) => {
     return (
-        <button className={cn("grid grid-cols-3 p-2 w-full h-full text-sm shadow-sm bg-gradient-to-b from-c-dark1 to-c-dark1 text-c-light lg:text-base xl:text-lgs", className)} type="button">
+        <button className={cn("flex items-center p-2 w-full h-full shadow-sm bg-gradient-to-b from-c-dark1 to-c-dark1 text-c-light lg:text-base xl:text-lgs", className)} type="button">
             {
                 Icon &&
                 <div className="flex items-center justify-center col-span-1 p-3">
@@ -56,16 +56,15 @@ const HeroSection = ({ className }: { className?: string }) => {
                 <hr className="flex-1 border border-c-dark1" />
                 <div className="grid grid-cols-3 gap-0 max-md:divide-y lg:divide-x divide-c-dark3 max-md:grid-cols-1">
                     <GradientButton Icon={MdOutlineWorkspacePremium}>
-
-                        <span>3 ans d'expérience</span>
+                        <span className="text-left">3 ans d'expérience</span>
                         <span className="text-c-gray">Travail</span>
                     </GradientButton>
                     <GradientButton Icon={MdOutlineWeb}>
-                        <span>+10 projets réalisés</span>
+                        <span className="text-left">+10 projets réalisés</span>
                         <span className="text-c-gray">Terminé</span>
                     </GradientButton>
                     <GradientButton Icon={GiHorizonRoad} className="from-purple-950 to-purple-950 hover:from-purple-900 hover:to-purple-950">
-                        <span>Découvrez mon parcours</span>
+                        <span className="text-left">Découvrez mon parcours</span>
                         <span className="text-c-gray">Résumé</span>
 
                     </GradientButton>
