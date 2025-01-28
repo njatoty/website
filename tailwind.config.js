@@ -13,6 +13,7 @@ export default {
       },
       colors: {
         "c-light": "#F8FAFC",
+        "c-gray-0": "#EBEBEB",
         "c-gray": "#8F9EB3",
         "c-dark0": "#344153",
         "c-dark1": "#1E2235",

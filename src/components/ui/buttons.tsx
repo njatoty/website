@@ -3,7 +3,7 @@ import { cn } from '../../utils';
 
 type ButtonProps = {
     variant?: 'outline' | 'fill'
-} & React.HTMLAttributes<HTMLButtonElement>;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ({ children, className, variant = 'outline', ...props }, ref) => {
@@ -12,11 +12,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 {...props}
                 ref={ref}
                 className={cn(
-                    className,
                     'px-2 py-1 rounded-md',
                     variant === 'outline'
-                        ? 'border border-c-dark0 bg-c-dark1 text-c-light hover:bg-c-dark0'
-                        : ''
+                        ? 'border border-c-gray-0 bg-c-light text-c-dark0 dark:border-c-dark0 dark:bg-c-dark1 dark:text-c-light dark:hover:bg-c-dark0'
+                        : '',
+                    className,
                 )}
             >
                 {children}
@@ -39,7 +39,7 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
                     className,
                     'px-2 py-1 rounded-md',
                     variant === 'outline'
-                        ? 'border border-c-dark0 bg-c-dark1 text-c-light hover:bg-c-dark0'
+                        ? 'border border-c-gray-0 bg-white text-c-dark0 dark:border-c-dark0 dark:bg-c-dark1 dark:text-c-light dark:hover:bg-c-dark0'
                         : ''
                 )}
             >
