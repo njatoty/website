@@ -6,7 +6,7 @@ interface MaxWidthWrapperProps {
   children?: React.ReactNode;
 }
 
-const MaxWidthWrapper = React.forwardRef<HTMLDivElement, MaxWidthWrapperProps>(({
+const MaxWidthWrapper = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & MaxWidthWrapperProps>(({
   className,
   children,
   ...props
