@@ -2,6 +2,7 @@ import { cn } from "../../utils"
 import { MdOutlineWeb, MdOutlineWorkspacePremium } from "react-icons/md";
 import { IconBaseProps } from "react-icons";
 import { GiHorizonRoad } from "react-icons/gi";
+import MaxWidthWrapper from "../ui/max-width-wrapper";
 
 const GradientButton = ({
     children, className, Icon
@@ -26,52 +27,56 @@ const GradientButton = ({
 
 const HeroSection = ({ className }: { className?: string }) => {
     return (
-        <div className={cn("flex flex-col md:justify-center gap-10 lg:gap-32 h-full w-full relative py-10", className)} id='hero'>
-
-            <div className="relative z-10 flex items-center w-full gap-2 max-md:flex-col">
-                <div className="flex flex-col justify-center flex-1 w-full">
-                    <h1 className='flex flex-col gap-2 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl text-slate-900 dark:text-slate-200 max-md:text-center'>
-                        <span>Bonjour,</span>
-                        <span>Je suis <span className='text-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-purple-500 bg-clip-text'>Njatotiana</span>,</span>
-                        <span className='font-light max-md:text-center text-c-gray'>Développeur Web Fullstack React/Node</span>
-                    </h1>
-                    <p className="max-w-md p-3 my-2 border-l-4 border-purple-900 lg:p-4 text-c-gray max-md:text-center max-md:mx-auto max-md:border-none">
-                        Je conçois et code des choses mangifiquement simples. Je suis passionné par mon travail.
-                    </p>
-                </div>
-                <div className="flex items-center justify-center flex-1">
-                    <div
-                        className="p-10 text-purple-300 text-7xl aspect-square w-52 lg:w-80"
-                        style={{
-                            background: 'url("./favicon.png")',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center'
-                        }}
-                    />
-                </div>
-            </div>
-
-            {/* Download my cv button */}
-            <div className="flex items-center w-full gap-1">
-                <hr className="flex-1 border border-c-dark1" />
-                <div className="grid grid-cols-3 gap-0 max-md:divide-y lg:divide-x divide-c-dark3 max-md:grid-cols-1">
-                    <GradientButton Icon={MdOutlineWorkspacePremium}>
-                        <span className="text-left">3 ans d'expérience</span>
-                        <span className="text-c-gray">Travail</span>
-                    </GradientButton>
-                    <GradientButton Icon={MdOutlineWeb}>
-                        <span className="text-left">+10 projets réalisés</span>
-                        <span className="text-c-gray">Terminé</span>
-                    </GradientButton>
-                    <GradientButton Icon={GiHorizonRoad} className="from-purple-950 to-purple-950 hover:from-purple-900 hover:to-purple-950">
-                        <span className="text-left">Découvrez mon parcours</span>
-                        <span className="text-c-gray">Résumé</span>
-
-                    </GradientButton>
+        <div
+            className={cn("flex flex-col", className)}
+            id="hero"
+        >
+            <MaxWidthWrapper className="relative flex flex-col w-full h-full gap-10 px-2 py-10 mx-auto md:justify-center lg:gap-32">
+                <div className="relative z-10 flex items-center w-full gap-2 max-md:flex-col">
+                    <div className="flex flex-col justify-center flex-1 w-full">
+                        <h1 className='flex flex-col gap-2 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl text-slate-900 dark:text-slate-200 max-md:text-center'>
+                            <span>Bonjour,</span>
+                            <span>Je suis <span className='text-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-purple-500 bg-clip-text'>Njatotiana</span>,</span>
+                            <span className='font-light max-md:text-center text-c-gray'>Développeur Web Fullstack React/Node</span>
+                        </h1>
+                        <p className="max-w-md p-3 my-2 border-l-4 border-purple-900 lg:p-4 text-c-gray max-md:text-center max-md:mx-auto max-md:border-none">
+                            Je conçois et code des choses mangifiquement simples. Je suis passionné par mon travail.
+                        </p>
+                    </div>
+                    <div className="flex items-center justify-center flex-1">
+                        <div
+                            className="p-10 text-purple-300 text-7xl aspect-square w-52 lg:w-80"
+                            style={{
+                                background: 'url("./favicon.png")',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                            }}
+                        />
+                    </div>
                 </div>
 
-                <hr className="flex-1 border border-c-dark1" />
-            </div>
+                {/* Download my cv button */}
+                <div className="flex items-center w-full gap-1">
+                    <hr className="flex-1 border border-c-dark1" />
+                    <div className="grid grid-cols-3 gap-0 max-md:divide-y lg:divide-x divide-c-dark3 max-md:grid-cols-1">
+                        <GradientButton Icon={MdOutlineWorkspacePremium} className="rounded-l-sm">
+                            <span className="text-left">3 ans d'expérience</span>
+                            <span className="text-c-gray">Travail</span>
+                        </GradientButton>
+                        <GradientButton Icon={MdOutlineWeb}>
+                            <span className="text-left">+10 projets réalisés</span>
+                            <span className="text-c-gray">Terminé</span>
+                        </GradientButton>
+                        <GradientButton Icon={GiHorizonRoad} className="rounded-r-sm hover:from-purple-950 hover:to-purple-950">
+                            <span className="text-left">Découvrez mon parcours</span>
+                            <span className="text-c-gray">Résumé</span>
+
+                        </GradientButton>
+                    </div>
+
+                    <hr className="flex-1 border border-c-dark1" />
+                </div>
+            </MaxWidthWrapper>
         </div>
     )
 }
