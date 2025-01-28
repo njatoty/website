@@ -85,7 +85,7 @@ const ServiceSection = ({ className }: { className?: string }) => {
                             <FaCubes size={32} />
                         </ServiceCard.Icon>
                         <ServiceCard.Body>
-                            <ServiceCard.Title>FListDiscl-Stack</ServiceCard.Title>
+                            <ServiceCard.Title>Full-Stack</ServiceCard.Title>
                             <ServiceCard.Description>
                                 <ListDisc className="list-disc list-inside">
                                     <ListDisc.Item>Développement d'applications complètes avec Next.js (Frontend) et Node.js (Backend).</ListDisc.Item>

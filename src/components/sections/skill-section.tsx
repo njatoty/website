@@ -26,7 +26,7 @@ const skills = [
 
 const SkillItem = ({ children }: PropsWithChildren) => {
     return (
-        <div className="flex items-center gap-2 p-1 text-sm border rounded-md lg:text-base border-c-dark0 bg-c-dark2 text-c-light">
+        <div className="flex items-center gap-2 p-1 text-sm border rounded-md lg:text-base border-c-gray-0 bg-c-light text-c-dark1 dark:border-c-dark0 dark:bg-c-dark2 dark:text-c-light">
             {children}
         </div>
     )
@@ -42,7 +42,7 @@ const SkillSection = ({
         <div className={cn("w-full h-full flex", className)}>
             <MaxWidthWrapper className="mx-auto">
                 <div className="w-full">
-                    <MutedTitle>Compétences Technique</MutedTitle>
+                    <MutedTitle>Compétences Techniques</MutedTitle>
                     <StrongTitle>Quelles sont mes compétences techniques ?</StrongTitle>
                     <Paragraph>
                         Au fil des années, j'ai acquis une expertise dans divers langages de programmation, frameworks et outils, qui me permettent de créer des solutions performantes et innovantes. Voici un aperçu des technologies que j'utilise au quotidien:

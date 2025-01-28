@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react'
 
 const AboutCard = ({ children }: PropsWithChildren) => {
     return (
-        <div className="flex flex-col flex-1 gap-8">
+        <div className="flex flex-col flex-1 gap-4 lg:gap-6">
             {children}
         </div>
     )
@@ -10,7 +10,7 @@ const AboutCard = ({ children }: PropsWithChildren) => {
 
 AboutCard.Icon = ({ children }: PropsWithChildren) => {
     return (
-        <div className="flex items-center justify-center p-3 border-2 border-purple-500 aspect-square w-fit">
+        <div className="flex items-center justify-center p-3 border-2 border-purple-500 text-c-dark2 dark:text-c-light aspect-square w-fit">
             {children}
         </div>
     )
@@ -18,7 +18,7 @@ AboutCard.Icon = ({ children }: PropsWithChildren) => {
 
 AboutCard.Title = ({ children }: PropsWithChildren) => {
     return (
-        <div className="text-lg font-semibold title text-c-light">
+        <div className="text-lg font-semibold title text-c-dark2 dark:text-c-light">
             {children}
         </div>
     )

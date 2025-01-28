@@ -79,8 +79,8 @@ const AboutSection = ({ className }: { className?: string }) => {
                                 </Paragraph>
                                 <ListDisc className="list-disc list-inside">
                                     <ListDisc.Item><b>Malgache</b>: langue maternelle</ListDisc.Item>
-                                    <ListDisc.Item><b>Français</b>: Courant</ListDisc.Item>
-                                    <ListDisc.Item><b>Anglais</b>: Intermédiaire</ListDisc.Item>
+                                    <ListDisc.Item><b>Français</b>: courant</ListDisc.Item>
+                                    <ListDisc.Item><b>Anglais</b>: intermédiaire</ListDisc.Item>
                                 </ListDisc>
                             </AboutCard.Body>
                         </AboutCard>

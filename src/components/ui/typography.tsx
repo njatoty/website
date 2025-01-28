@@ -15,7 +15,7 @@ export const MutedTitle = ({ children, className }: TypographyProps) => {
 export const StrongTitle = ({ children }: TypographyProps) => {
   return (
     <div className="max-w-fit">
-      <h2 className="text-2xl font-bold lg:text-3xl text-c-light">{children}</h2>
+      <h2 className="text-2xl font-bold lg:text-3xl text-c-dark2 dark:text-c-light">{children}</h2>
       <div className="w-1/3 h-1 my-4 bg-purple-500" />
     </div>
   )
@@ -23,7 +23,7 @@ export const StrongTitle = ({ children }: TypographyProps) => {
 
 export const Paragraph = ({ children, className }: TypographyProps) => {
   return (
-    <p className={cn("text-c-gray", className)}>
+    <p className={cn("text-c-dark0 dark:text-c-gray", className)}>
       {children}
     </p>
   )
@@ -31,7 +31,7 @@ export const Paragraph = ({ children, className }: TypographyProps) => {
 
 export const ListDisc = ({ children, className }: TypographyProps) => {
   return (
-    <ul className={cn("text-c-gray list-disc list-inside", className)}>
+    <ul className={cn("text-c-dark0 dark:text-c-gray list-disc list-inside", className)}>
       {children}
     </ul>
   )

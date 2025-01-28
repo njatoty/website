@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '../../utils';
 import ThemeToggle from '../theme-toggle';
+import Button from './buttons';
 
 type NavigationBarProps = React.HTMLAttributes<HTMLElement>;
 const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
@@ -34,11 +35,11 @@ const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
             </div>
 
             {/* Menu */}
-            <div className='flex items-center flex-1 gap-2 divide-x justify-stretch lg:gap-4 divide-c-dark1'>
+            <div className='flex items-center flex-1 gap-2 divide-x justify-stretch lg:gap-4 divide-c-gray-0 dark:divide-c-dark1'>
                 <ul className="flex items-center justify-end flex-1 gap-3 lg:gap-4">
                     {
                         menuData.map((menuItem, index) => (
-                            <li key={index} className='text-sm text-c-gray hover:text-purple-500 md:text-base lg:text-lg text-nowrap'>
+                            <li key={index} className='text-sm text-c-dark0 dark:text-c-gray hover:text-purple-500 md:text-base lg:text-lg text-nowrap'>
                                 <a href="#">{menuItem.label}</a>
                             </li>
                         ))
@@ -51,9 +52,9 @@ const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
                 </div>
 
                 <div className="pl-2 lg:pl-4">
-                    <button type='button' className='px-3 py-2 text-sm transition-all duration-100 ease-in border rounded-full bg-purple-500/10 border-purple-300/20 text-c-light lg:block hover:border-purple-500 hover:bg-purple-950 active:bg-purple-900 lg:text-base max-md:hidden'>
+                    <Button type='button' className='px-3 py-2 text-sm transition-all duration-100 ease-in border rounded-full lg:block lg:text-base max-md:hidden'>
                         Collaborons
-                    </button>
+                    </Button>
                 </div>
             </div>
         </nav>

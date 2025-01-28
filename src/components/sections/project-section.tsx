@@ -1,4 +1,4 @@
-import { FaArrowRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import { cn } from '../../utils'
 import { LinkButton } from '../ui/buttons';
 import { NpmIcon } from '../ui/icons/dev';
@@ -71,6 +71,20 @@ const static_projects = [
     },
 ];
 
+const npm_projects = [
+    {
+        name: "react-canvas-snap",
+        description: `Une bibliothèque React permettant de capturer une zone spécifique d'un canvas avec le curseur de la souris. Dessinez un cadre de sélection pour capturer le contenu souhaité.`,
+        githubLink: "https://github.com/njatoty/react-canvas-snap",
+        npmLink: "https://www.npmjs.com/package/react-canvas-snap?activeTab=readme",
+        blogLink: "/blog/react-canva-snap",
+        badgesLinks: [
+            "https://img.shields.io/npm/dw/react-canvas-snap?color=green&style=flat-square",
+            "https://img.shields.io/bundlephobia/minzip/react-canvas-snap?style=flat-square"
+        ]
+    }
+]
+
 
 const ProjectSection = ({ className, }: { className?: string }) => {
     return (
@@ -134,48 +148,44 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                 </div>
                 <div className="flex flex-col w-full">
                     <MutedTitle className='text-sm font-bold'># NPM Library</MutedTitle>
-                    <WorkCard className='w-fit'>
-                        <WorkCard.Body>
-                            <div className="flex items-stretch gap-4 p-2">
-                                <div className="flex p-0 place-items-center">
-                                    <NpmIcon size={50} />
-                                </div>
-                                <div className='w-full'>
-                                    <Paragraph className='mb-1'>
-                                        <span className='font-bold text-c-light'>react-canvas-snap</span>
-                                    </Paragraph>
-                                    <Paragraph className='w-full max-w-lg text-sm line-clamp-3'>
-                                        Une bibliothèque React permettant de capturer une zone spécifique d'un canvas avec le curseur de la souris.
-                                        Dessinez un cadre de sélection pour capturer le contenu souhaité.
-                                    </Paragraph>
-                                </div>
-                            </div>
-                            <div className="flex flex-wrap items-center gap-2">
-                                <LinkButton
-                                    href='https://www.npmjs.com/package/react-canvas-snap?activeTab=readme'
-                                    target='_blank'
-                                    className='flex items-center gap-2 text-xs hover:text-orange-500'
-                                >
-                                    Voir sur npm
-                                    <FaExternalLinkAlt className='text-c-gray' size={10} />
-                                </LinkButton>
-
-                                <LinkButton
-                                    href='https://github.com/njatoty/react-canvas-snap'
-                                    target='_blank'
-                                    className='flex items-center gap-2 text-xs hover:text-orange-500'
-                                >
-                                    Voir sur GitHub
-                                    <FaExternalLinkAlt className='text-c-gray' size={10} />
-                                </LinkButton>
-
-                                <LinkButton href='/blog' className='flex items-center gap-2 text-xs'>
-                                    En savoir plus sur mon blog
-                                    <FaArrowRight className='text-c-gray' size={10} />
-                                </LinkButton>
-                            </div>
-                        </WorkCard.Body>
-                    </WorkCard>
+                    <div className="flex flex-nowrap">
+                        {
+                            npm_projects.map((project, index) => (
+                                <WorkCard key={index} className='w-fit'>
+                                    <WorkCard.Body>
+                                        <div className="flex items-stretch gap-4 p-2">
+                                            <div className="flex px-4 place-items-center">
+                                                <NpmIcon size={50} />
+                                            </div>
+                                            <div className='flex flex-col w-full gap-2'>
+                                                <Paragraph className=''>
+                                                    <span className='font-bold text-c-dark0 dark:text-c-light'>{project.name}</span>
+                                                </Paragraph>
+                                                <Paragraph className='w-full max-w-lg text-sm line-clamp-3'>
+                                                    {project.description}
+                                                </Paragraph>
+                                                <div className="flex items-center gap-2">
+                                                    {
+                                                        project.badgesLinks.map((link, index) => (
+                                                            <a key={index} href={project.npmLink} target="_blank">
+                                                                <img src={link} alt="npm badge" />
+                                                            </a>
+                                                        ))
+                                                    }
+                                                </div>
+                                                <div className="flex flex-wrap items-center gap-2">
+                                                    <LinkButton href={project.blogLink} className='flex items-center gap-2 text-xs'>
+                                                        En savoir plus sur mon blog
+                                                        <FaArrowRight className='text-c-gray' size={10} />
+                                                    </LinkButton>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </WorkCard.Body>
+                                </WorkCard>
+                            ))
+                        }
+                    </div>
                 </div>
             </MaxWidthWrapper>
         </div>

@@ -11,7 +11,7 @@ const GradientButton = ({
     Icon?: React.ComponentType<IconBaseProps>
 }) => {
     return (
-        <button className={cn("flex items-center p-2 w-full h-full shadow-sm bg-gradient-to-b from-c-dark1 to-c-dark1 text-c-light lg:text-base xl:text-lgs", className)} type="button">
+        <button className={cn("flex items-center p-2 w-full h-full shadow-sm bg-c-light dark:bg-c-dark1 text-c-dark0 dark:text-c-light lg:text-base xl:text-lgs", className)} type="button">
             {
                 Icon &&
                 <div className="flex items-center justify-center col-span-1 p-3">
@@ -37,9 +37,9 @@ const HeroSection = ({ className }: { className?: string }) => {
                         <h1 className='flex flex-col gap-2 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl text-slate-900 dark:text-slate-200 max-md:text-center'>
                             <span>Bonjour,</span>
                             <span>Je suis <span className='text-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-purple-500 bg-clip-text'>Njatotiana</span>,</span>
-                            <span className='font-light max-md:text-center text-c-gray'>Développeur Web Fullstack React/Node</span>
+                            <span className='font-light max-md:text-center text-c-dark0 dark:text-c-gray'>Développeur Web Fullstack React/Node</span>
                         </h1>
-                        <p className="max-w-md p-3 my-2 border-l-4 border-purple-900 lg:p-4 text-c-gray max-md:text-center max-md:mx-auto max-md:border-none">
+                        <p className="max-w-md p-3 my-2 border-l-4 border-purple-900 lg:p-4 text-c-dark0 dark:text-c-gray max-md:text-center max-md:mx-auto max-md:border-none">
                             Je conçois et code des choses mangifiquement simples. Je suis passionné par mon travail.
                         </p>
                     </div>
@@ -57,8 +57,8 @@ const HeroSection = ({ className }: { className?: string }) => {
 
                 {/* Download my cv button */}
                 <div className="flex items-center w-full gap-1">
-                    <hr className="flex-1 border border-c-dark1" />
-                    <div className="grid grid-cols-3 gap-0 max-md:divide-y lg:divide-x divide-c-dark3 max-md:grid-cols-1">
+                    <hr className="flex-1 border border-c-gray-0 dark:border-c-dark1" />
+                    <div className="grid grid-cols-3 gap-0 max-md:divide-y lg:divide-x divide-c-gray-0 dark:divide-c-dark3 max-md:grid-cols-1">
                         <GradientButton Icon={MdOutlineWorkspacePremium} className="rounded-l-sm">
                             <span className="text-left">3 ans d'expérience</span>
                             <span className="text-c-gray">Travail</span>
@@ -67,14 +67,14 @@ const HeroSection = ({ className }: { className?: string }) => {
                             <span className="text-left">+10 projets réalisés</span>
                             <span className="text-c-gray">Terminé</span>
                         </GradientButton>
-                        <GradientButton Icon={GiHorizonRoad} className="rounded-r-sm hover:from-purple-950 hover:to-purple-950">
+                        <GradientButton Icon={GiHorizonRoad} className="rounded-r-sm">
                             <span className="text-left">Découvrez mon parcours</span>
                             <span className="text-c-gray">Résumé</span>
 
                         </GradientButton>
                     </div>
 
-                    <hr className="flex-1 border border-c-dark1" />
+                    <hr className="flex-1 border border-c-gray-0 dark:border-c-dark1" />
                 </div>
             </MaxWidthWrapper>
         </div>
