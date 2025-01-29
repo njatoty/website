@@ -72,7 +72,7 @@ const ServiceSection = ({ className }: { className?: string }) => {
                             <ServiceCard.Title>Applications de bureau</ServiceCard.Title>
                             <ServiceCard.Description>
                                 <ListDisc className="list-disc list-inside">
-                                    <ListDisc.Item>Développement d'applications mListDisctiplateformes avec Electron.js.</ListDisc.Item>
+                                    <ListDisc.Item>Développement d'applications multiplateformes avec Electron.js.</ListDisc.Item>
                                     <ListDisc.Item>Intégration de fonctionnalités natives comme la gestion des fichiers.</ListDisc.Item>
                                     <ListDisc.Item>Compatibilité avec Windows, macOS et Linux.</ListDisc.Item>
                                 </ListDisc>
