@@ -173,7 +173,7 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                                                         ))
                                                     }
                                                 </div>
-                                                <div className="flex flex-wrap items-center gap-2">
+                                                <div className="flex flex-wrap items-center gap-2 mt-1">
                                                     <LinkButton href={project.blogLink} className='flex items-center gap-2 text-xs'>
                                                         En savoir plus sur mon blog
                                                         <FaArrowRight className='text-c-gray' size={10} />

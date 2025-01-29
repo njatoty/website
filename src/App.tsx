@@ -7,6 +7,8 @@ import ServiceSection from './components/sections/service-section';
 import SkillSection from './components/sections/skill-section';
 import ProjectSection from './components/sections/project-section';
 import ExperimentSection from './components/sections/experiment-section';
+import ContactSection from './components/sections/contact-section';
+import FooterSection from './components/sections/footer-section';
 
 function App() {
 
@@ -36,6 +38,10 @@ function App() {
             <ProjectSection className='p-5' />
             {/* Experiment section */}
             <ExperimentSection className='p-5' />
+            {/* Contact section */}
+            <ContactSection className='p-5' />
+            {/* Footer section */}
+            <FooterSection className='' />
 
           </div>
 
@@ -50,7 +56,7 @@ function App() {
         </div>
 
         {/* shadow */}
-        <div aria-hidden="true" className='fixed right-0 inset-y-0 h-[300px] w-[200px] bg-gradient-to-b from-pink-500 to-indigo-600 blur-3xl opacity-35 -rotate-45 scale-150' />
+        <div aria-hidden="true" className='fixed right-0 inset-y-0 h-[300px] w-[200px] bg-gradient-to-b from-pink-500 to-indigo-600 blur-3xl opacity-25 -rotate-45 scale-150' />
         <div aria-hidden="true" className='absolute left-20  inset-y-0 h-[150px] w-[150px] bg-gradient-to-b from-purple-500 to-purple-600 blur-3xl opacity-35 -rotate-40 scale-150' />
 
       </div>

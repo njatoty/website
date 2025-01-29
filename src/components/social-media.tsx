@@ -5,7 +5,7 @@ const socialLinks = [
     },
     { href: 'https://www.facebook.com/njatotiana.fiononana.a', icon: <BsFacebook className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'Facebook' },
     { href: 'https://www.linkedin.com/in/njatotiana-fiononana-andriamanirisoa-a81a00265', icon: <BsLinkedin className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'LinkedIn' },
-    { href: 'https://wa.me/+2619190392', icon: <BsWhatsapp className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'WhatsApp' },
+    { href: 'https://wa.me/+261349190392', icon: <BsWhatsapp className='w-6 h-6 md:w-8 md:h-8 aspect-square' />, name: 'WhatsApp' },
 ];
 
 const SocialMedia = () => {
