@@ -1,7 +1,9 @@
 import { cn } from "../../utils"
+import { LinkButton } from "../ui/buttons"
 import MaxWidthWrapper from "../ui/max-width-wrapper"
 import Timeline from "../ui/timeline"
 import { MutedTitle, Paragraph, StrongTitle } from "../ui/typography"
+import { BsArrowRight } from "react-icons/bs"
 
 const ExperimentSection = ({ className }: { className?: string }) => {
     return (
@@ -14,7 +16,7 @@ const ExperimentSection = ({ className }: { className?: string }) => {
                         Chaque étape de mon parcours, entre formations et expériences, m'a permis d'acquérir des compétences solides et de relever divers défis. Voici un aperçu de mon évolution:
                     </Paragraph>
                 </div>
-                <div className="grid grid-cols-1 gap-10 my-5 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-5 my-5 md:gap-10 md:grid-cols-2">
                     <div className="w-full">
 
                         <MutedTitle className='mb-4 text-sm font-bold'>Experiences professionnelles</MutedTitle>
@@ -80,6 +82,36 @@ const ExperimentSection = ({ className }: { className?: string }) => {
                             </Timeline.Body>
                         </Timeline>
                     </div>
+                </div>
+                <div className="w-full my-6">
+                    <MutedTitle className='mb-4 text-sm font-bold'>Découvrez mon CV</MutedTitle>
+                    <Paragraph>Consultez mon CV pour plus de détails sur mon parcours et mes compétences.</Paragraph>
+
+                    <LinkButton
+                        href="/cv-njato.pdf" // Remplace par l'URL de ton CV
+                        variant="fill"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 my-4"
+                    >
+                        <span>Voir mon CV</span>
+                        <BsArrowRight size={20} />
+                    </LinkButton>
+                </div>
+                <div className="w-full my-6">
+                    <MutedTitle className='mb-4 text-sm font-bold'>Mon Blog</MutedTitle>
+                    <Paragraph>Partage de mes expériences, conseils et découvertes en développement web.</Paragraph>
+
+                    <LinkButton
+                        href="/blog" // Remplace par l'URL de ton CV
+                        variant="outline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 mt-4"
+                    >
+                        <span>Voir mon Blog</span>
+                        <BsArrowRight size={20} />
+                    </LinkButton>
                 </div>
             </MaxWidthWrapper>
         </div>

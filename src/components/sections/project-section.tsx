@@ -98,7 +98,7 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                     </Paragraph>
                 </div>
                 <div className="flex flex-col w-full my-5">
-                    <MutedTitle className='text-sm font-bold'># Projets Dynamiques</MutedTitle>
+                    <MutedTitle className='text-sm font-bold'>Projets Dynamiques</MutedTitle>
                     <Swiper className="w-full">
                         {[...dynamic_projects].map((project, index) => (
                             <WorkCard className='min-w-[350px] w-[350px]' key={index}>
@@ -123,7 +123,7 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                 </div>
 
                 <div className="flex flex-col w-full my-5">
-                    <MutedTitle className='text-sm font-bold'># Projets Statiques</MutedTitle>
+                    <MutedTitle className='text-sm font-bold'>Projets Statiques</MutedTitle>
                     <Swiper className="w-full">
                         {[...static_projects].map((project, index) => (
                             <WorkCard className='min-w-[350px] w-[350px]' key={index}>
@@ -147,7 +147,7 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                     </Swiper>
                 </div>
                 <div className="flex flex-col w-full">
-                    <MutedTitle className='text-sm font-bold'># NPM Library</MutedTitle>
+                    <MutedTitle className='text-sm font-bold'>NPM Library</MutedTitle>
                     <div className="flex flex-nowrap">
                         {
                             npm_projects.map((project, index) => (
@@ -164,7 +164,7 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                                                 <Paragraph className='w-full max-w-lg text-sm line-clamp-3'>
                                                     {project.description}
                                                 </Paragraph>
-                                                <div className="flex items-center gap-2">
+                                                <div className="flex items-center gap-2 mb-4">
                                                     {
                                                         project.badgesLinks.map((link, index) => (
                                                             <a key={index} href={project.npmLink} target="_blank">
@@ -172,12 +172,6 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                                                             </a>
                                                         ))
                                                     }
-                                                </div>
-                                                <div className="flex flex-wrap items-center gap-2 mt-1">
-                                                    <LinkButton href={project.blogLink} className='flex items-center gap-2 text-xs'>
-                                                        En savoir plus sur mon blog
-                                                        <FaArrowRight className='text-c-gray' size={10} />
-                                                    </LinkButton>
                                                 </div>
                                             </div>
                                         </div>
