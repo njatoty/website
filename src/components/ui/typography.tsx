@@ -2,7 +2,7 @@ import React from "react"
 import { cn } from "../../utils";
 
 type TypographyProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string
 };
 

@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='relative flex flex-col w-full min-h-screen bg-white dark:bg-c-dark3 text-c-light'>
 
-      <MaxWidthWrapper className='sticky top-0 z-50 pt-2 pb-0 mx-auto rounded-b-full max-md:px-2 backdrop-blur'>
+      <MaxWidthWrapper className='sticky top-0 z-50 px-1 pt-2 pb-0 mx-auto rounded-b-full max-md:px-2 backdrop-blur'>
         <Navbar className='bg-white border-c-gray dark:bg-c-dark3 dark:border-c-dark1' />
       </MaxWidthWrapper>
 
