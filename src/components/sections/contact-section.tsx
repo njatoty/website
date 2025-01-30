@@ -20,16 +20,16 @@ const ContactSection = ({ className, }: { className?: string }) => {
                 <div className="grid grid-cols-1 gap-4 my-6 lg:grid-cols-2">
                     <div className="w-full">
                         <MutedTitle className='mb-4 text-sm font-bold'>Contacts:</MutedTitle>
-                        <ContactItem href='tel:0349190392'>
+                        <ContactItem href='tel:0389190392'>
                             <MdPhone size={20} />
                             <span className='opacity-60'>:</span>
-                            <span>034 51 742 41</span>
+                            <span>038 91 903 92</span>
                         </ContactItem>
 
-                        <ContactItem href='https://wa.me/+261349190392'>
+                        <ContactItem href='https://wa.me/+261389190392'>
                             <MdWhatsapp size={20} />
                             <span className='opacity-60'>:</span>
-                            <span>+261 34 51 742 41</span>
+                            <span>+261 38 91 903 92</span>
                         </ContactItem>
 
                         <ContactItem href='mailto:njatotianafiononana@gmail.com'>

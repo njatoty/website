@@ -40,7 +40,7 @@ const ServiceSection = ({ className }: { className?: string }) => {
                             <ServiceCard.Title>Backend</ServiceCard.Title>
                             <ServiceCard.Description>
                                 <ListDisc className="list-disc list-inside">
-                                    <ListDisc.Item>Création d'API RESTfListDisc robustes avec Node.js et Express.js.</ListDisc.Item>
+                                    <ListDisc.Item>Création d'API RESTfull robustes avec Node.js et Express.js.</ListDisc.Item>
                                     <ListDisc.Item>Gestion des bases de données MongoDB (Mongoose) et MySQL.</ListDisc.Item>
                                     <ListDisc.Item>Mise en place de systèmes d'authentification et de sécurité.</ListDisc.Item>
                                 </ListDisc>
@@ -88,7 +88,7 @@ const ServiceSection = ({ className }: { className?: string }) => {
                             <ServiceCard.Title>Full-Stack</ServiceCard.Title>
                             <ServiceCard.Description>
                                 <ListDisc className="list-disc list-inside">
-                                    <ListDisc.Item>Développement d'applications complètes avec Next.js (Frontend) et Node.js (Backend).</ListDisc.Item>
+                                    <ListDisc.Item>Développement d'applications complètes avec Next.js ou React (Frontend) et Node.js (Backend).</ListDisc.Item>
                                     <ListDisc.Item>Déploiement sur des plateformes cloud comme Vercel, Heroku ou AWS.</ListDisc.Item>
                                     <ListDisc.Item>Maintenance et optimisation des performances des applications.</ListDisc.Item>
                                 </ListDisc>
