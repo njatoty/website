@@ -1,6 +1,5 @@
-import { FaArrowRight } from 'react-icons/fa';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 import { cn } from '../../utils'
-import { LinkButton } from '../ui/buttons';
 import { NpmIcon } from '../ui/icons/dev';
 import MaxWidthWrapper from '../ui/max-width-wrapper';
 import Swiper from '../ui/swiper';
@@ -56,6 +55,13 @@ const static_projects = [
         link: "https://njatoty.github.io/portfolio"
     },
     {
+        image: "./projects/static/portfolio-4.png",
+        title: "Design de portfolio web",
+        description: "Un design élégant et simple",
+        techs: ["HTML", "CSS"],
+        link: "https://njatoty.github.io/lightweight-portfolio"
+    },
+    {
         image: "./projects/static/portfolio-3.png",
         title: "Design de portfolio web",
         description: "Un design simple.",
@@ -86,9 +92,9 @@ const npm_projects = [
 ]
 
 
-const ProjectSection = ({ className, }: { className?: string }) => {
+const ProjectSection = ({ className }: { className?: string }) => {
     return (
-        <div className={cn('w-full flex-grow', className)}>
+        <section id='project' className={cn('w-full flex-grow', className)}>
             <MaxWidthWrapper className='mx-auto'>
                 <div className="w-full">
                     <MutedTitle>Mes projets</MutedTitle>
@@ -104,7 +110,7 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                             <WorkCard className='min-w-[350px] w-[350px]' key={index}>
                                 <WorkCard.Image
                                     src={project.image}
-                                    className='relative z-10 w-full'
+                                    className='relative z-10 w-full h-[170px]'
                                 />
                                 <WorkCard.Body>
                                     <WorkCard.Title>{project.title}</WorkCard.Title>
@@ -125,14 +131,14 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                 <div className="flex flex-col w-full my-5">
                     <MutedTitle className='text-sm font-bold'>Projets Statiques</MutedTitle>
                     <Swiper className="w-full">
-                        {[...static_projects].map((project, index) => (
+                        {static_projects.map((project, index) => (
                             <WorkCard className='min-w-[350px] w-[350px]' key={index}>
                                 <WorkCard.Image
                                     src={project.image}
                                     className='relative z-10 w-full'
                                 />
                                 <WorkCard.Body>
-                                    <WorkCard.Title>{project.title}</WorkCard.Title>
+                                    <WorkCard.Title link={project.link}>{project.title}</WorkCard.Title>
                                     <Paragraph className='text-sm'>
                                         {project.description}
                                     </Paragraph>
@@ -159,7 +165,10 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                                             </div>
                                             <div className='flex flex-col w-full gap-2'>
                                                 <Paragraph className=''>
-                                                    <span className='font-bold text-c-dark0 dark:text-c-light'>{project.name}</span>
+                                                    <a href={project.npmLink} target='_blank' className='flex items-center gap-2 font-bold text-c-dark0 dark:text-c-light'>
+                                                        {project.name}
+                                                        <HiOutlineExternalLink size={16} />
+                                                    </a>
                                                 </Paragraph>
                                                 <Paragraph className='w-full max-w-lg text-sm line-clamp-3'>
                                                     {project.description}
@@ -182,8 +191,8 @@ const ProjectSection = ({ className, }: { className?: string }) => {
                     </div>
                 </div>
             </MaxWidthWrapper>
-        </div>
+        </section>
     )
-}
+};
 
 export default ProjectSection

@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { cn } from '../../utils';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 const WorkCard = ({ children, className }: { className?: string } & PropsWithChildren) => {
     return (
@@ -9,10 +10,13 @@ const WorkCard = ({ children, className }: { className?: string } & PropsWithChi
     )
 }
 
-WorkCard.Title = ({ children, className }: { className?: string } & PropsWithChildren) => {
+WorkCard.Title = ({ children, className, link }: { className?: string, link?: string } & PropsWithChildren) => {
     return (
-        <h1 className={cn("text-c-dark0 dark:text-c-light font-semibold text-pretty", className)}>
+        <h1 className={cn("text-c-dark0 dark:text-c-light font-semibold text-pretty flex items-center gap-2", className)}>
             {children}
+            {link && <a href={link} target='_blank' className='opacity-60 hover:opacity-100'>
+                <HiOutlineExternalLink size={16} />
+            </a>}
         </h1>
     )
 }
@@ -23,9 +27,8 @@ WorkCard.Image = ({ className, src }: { className?: string, src: string }) => {
             src={src}
             alt="image"
             loading='lazy'
-            className={cn("w-full", className)}
+            className={cn("w-full object-contain ", className)}
         />
-        <div className='absolute top-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-c-dark1 aspect-[16/9] object-cover' />
     </div>)
 };
 

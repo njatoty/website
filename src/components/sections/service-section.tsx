@@ -6,7 +6,7 @@ import MaxWidthWrapper from "../ui/max-width-wrapper"
 
 const ServiceSection = ({ className }: { className?: string }) => {
     return (
-        <div className={cn('w-full flex', className)} id="service">
+        <section className={cn('w-full flex', className)} id="service">
             <MaxWidthWrapper className="mx-auto">
                 <div className="w-full col-span-1 max-md:col-span-2">
                     <MutedTitle>Mes services</MutedTitle>
@@ -97,7 +97,7 @@ const ServiceSection = ({ className }: { className?: string }) => {
                     </ServiceCard>
                 </div>
             </MaxWidthWrapper>
-        </div>
+        </section>
     )
 }
 

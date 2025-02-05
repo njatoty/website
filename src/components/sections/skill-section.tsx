@@ -39,7 +39,7 @@ const SkillSection = ({
     className?: string
 }) => {
     return (
-        <div className={cn("w-full h-full flex", className)}>
+        <section id="skill" className={cn("w-full h-full flex", className)}>
             <MaxWidthWrapper className="mx-auto">
                 <div className="w-full">
                     <MutedTitle>Compétences Techniques</MutedTitle>
@@ -59,7 +59,7 @@ const SkillSection = ({
                     }
                 </div>
             </MaxWidthWrapper>
-        </div>
+        </section>
     )
 }
 

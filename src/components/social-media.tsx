@@ -15,7 +15,7 @@ const SocialMedia = () => {
                 <a
                     key={index}
                     href={link.href}
-                    className="p-2 border rounded-lg bg-c-light border-c-gray-0 dark:border-c-dark1 text-c-dark0 dark:text-c-light dark:bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500"
+                    className="p-2 transition-all duration-200 ease-in-out border rounded-lg bg-c-light border-c-gray-0 dark:border-c-dark1 text-c-dark0 dark:text-c-light dark:bg-c-dark2 hover:text-purple-600 hover:shadow-sm hover:border-purple-400 hover:shadow-purple-500 hover:scale-125 dark:hover:text-purple-600"
                     aria-label={link.name}
                 >
                     <div className="w-6 h-6 md:w-8 md:h-8 aspect-square">

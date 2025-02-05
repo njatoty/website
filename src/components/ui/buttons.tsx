@@ -28,20 +28,26 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 type LinkButtonProps = {
     variant?: 'outline' | 'fill'
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>;
-
-export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
-    ({ children, className, variant = 'outline', ...props }, ref) => {
+export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps & { color?: 'primary' | 'secondary' }>(
+    ({ children, className, variant = 'outline', color = 'primary', ...props }, ref) => {
         const buttonClassName = {
-            outline: "border-2 border-purple-500 text-purple-500 hover:text-c-dark3 hover:border-purple-600 hover:bg-purple-400 hover:bg-opacity-10 focus:border-purple-700 focus:text-purple-700 active:border-purple-800 active:text-purple-800 dark:border-purple-300 dark:text-purple-300 dark:hover:hover:bg-purple-300 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0",
-            fill: "bg-purple-500 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-purple-600 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-purple-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] active:bg-purple-700 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-        }
+            outline: {
+                primary: "border-2 border-purple-500 text-purple-500 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-400 hover:bg-opacity-10 focus:border-purple-700 focus:text-purple-700 active:border-purple-800 active:text-purple-800 dark:border-purple-300 dark:text-purple-300 dark:hover:bg-purple-300",
+                secondary: "border-2 border-c-dark0 text-c-dark0 hover:text-c-light hover:bg-c-dark1 focus:border-slate-700 focus:text-slate-700 active:border-slate-800 active:text-slate-800 dark:border-c-gray dark:text-c-gray dark:hover:bg-c-dark1 dark:hover:text-c-light"
+            },
+            fill: {
+                primary: "bg-purple-500 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-purple-600 focus:bg-purple-800 active:bg-purple-700",
+                secondary: "bg-slate-500 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-slate-600 focus:bg-slate-800 active:bg-slate-700"
+            }
+        };
+
         return (
             <a
                 {...props}
                 ref={ref}
                 className={cn(
-                    'px-2 py-1 rounded-md flex items-center gap-2 w-fit',
-                    buttonClassName[variant],
+                    'px-2 py-1 rounded flex items-center gap-2 w-fit transition duration-150 ease-in-out focus:outline-none focus:ring-0',
+                    buttonClassName[variant][color],
                     className
                 )}
             >
@@ -50,6 +56,5 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
         );
     }
 );
-
 
 export default Button

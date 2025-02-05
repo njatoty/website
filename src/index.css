@@ -20,4 +20,8 @@
         scroll-snap-align: start;
     }
 
+    a.active {
+        @apply text-purple-500;
+    }
+
 }
