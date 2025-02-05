@@ -1,23 +1,28 @@
-import { cn } from "../../utils"
 import { MdOutlineWorkspacePremium } from "react-icons/md"
-import { PiGraduationCapFill } from "react-icons/pi"
 import { TbJewishStar } from "react-icons/tb"
+import { PiGraduationCapFill } from "react-icons/pi"
 import { BiWorld } from "react-icons/bi"
-import { ListDisc, MutedTitle, Paragraph, StrongTitle } from "../ui/typography"
-import AboutCard from "../ui/about-card"
-import MaxWidthWrapper from "../ui/max-width-wrapper"
+import { ListDisc, MutedTitle, Paragraph, StrongTitle } from "@/components/ui/typography"
+import AboutCard from "@/components/ui/about-card"
+import MaxWidthWrapper from "@/components/ui/max-width-wrapper"
+import { cn } from "@/utils"
 
 const AboutSection = ({ className }: { className?: string }) => {
     return (
-        <div className={cn("w-full flex", className)} id='about'>
+        <section id="about" className={cn("w-full flex", className)}>
             <MaxWidthWrapper className="px-2 mx-auto">
                 <div className="grid grid-cols-3 gap-10 max-md:grid-cols-2 max-sm:grid-cols-1">
                     <div className="w-full col-span-1 max-md:col-span-2">
                         <MutedTitle>A propos de moi</MutedTitle>
                         <StrongTitle>Qui suis-je?</StrongTitle>
                         <Paragraph>
-                            Développeur web passionné, spécialisé en solutions web innovantes. Avec une expertise en frontend et backend, je crée des expériences utilisateur fluides et performantes.
+                            Moi, c'est <span className="font-semibold">ANDRIAMANIRISOA Njatotiana Fiononana</span>, un développeur web passionné par la création de solutions innovantes. Fort d'une expertise en frontend et backend, je transforme des idées en solutions digitales efficaces et adaptées aux besoins des utilisateurs.
                         </Paragraph>
+                        <div className="flex-col items-center justify-center hidden w-full gap-2 my-6">
+                            <div className="img max-w-[250px]  dark:border-purple-600/40 border-c-gray-0 relative w-full aspect-square dark:bg-c-dark2 overflow-hidden">
+                                <img src="/profile/me.png" alt="me" className="absolute object-cover w-full scale-125 dark:mix-blend-lighten mix-blend-darken aspect-square dark:bg-c-dark3" />
+                            </div>
+                        </div>
                     </div>
                     <div className="grid w-full grid-cols-2 col-span-2 gap-10 max-sm:grid-cols-1">
                         {/* Parcours */}
@@ -30,7 +35,7 @@ const AboutSection = ({ className }: { className?: string }) => {
                             </AboutCard.Title>
                             <AboutCard.Body>
                                 <Paragraph>
-                                    Développeur Fullstack chez <a href="https://www.solumada.mg" target="__blank" className="font-bold">Solumada</a> depuis janvier 2022. Actuellement en poste, je contribue aux projets de l'entreprise avec expertise et professionnalisme.
+                                    Avec 3 ans d'expérience en développement web, j'interviens sur divers projets en apportant expertise et professionnalisme.
                                 </Paragraph>
                             </AboutCard.Body>
                         </AboutCard>
@@ -45,7 +50,7 @@ const AboutSection = ({ className }: { className?: string }) => {
                             </AboutCard.Title>
                             <AboutCard.Body>
                                 <Paragraph>
-                                    Titulaire d'une licence en Informatique, spécialisation Applications et Génie Logiciel, obtenue à <a href="https://zurcher.edu.mg" target="__blank" className="font-bold">Université Adventist Zurcher</a> le 14 novembre 2021.
+                                    Diplômé en Informatique avec une spécialisation en Applications et Génie Logiciel.
                                 </Paragraph>
                             </AboutCard.Body>
                         </AboutCard>
@@ -87,7 +92,7 @@ const AboutSection = ({ className }: { className?: string }) => {
                     </div>
                 </div>
             </MaxWidthWrapper>
-        </div>
+        </section>
     )
 }
 

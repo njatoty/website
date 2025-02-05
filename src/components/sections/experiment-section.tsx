@@ -7,7 +7,7 @@ import { BsArrowRight } from "react-icons/bs"
 
 const ExperimentSection = ({ className }: { className?: string }) => {
     return (
-        <div className={cn('w-full flex', className)} id="service">
+        <section id="experiment" className={cn('w-full flex', className)}>
             <MaxWidthWrapper className="mx-auto">
                 <div className="w-full col-span-1 max-md:col-span-2">
                     <MutedTitle>Mes parcours</MutedTitle>
@@ -31,7 +31,7 @@ const ExperimentSection = ({ className }: { className?: string }) => {
                                     <Timeline.Badge className="text-xs border-none bg-c-dark0 text-c-light">Node.js</Timeline.Badge>
                                 </Timeline.Badges>
                                 <Timeline.Tag>
-                                    SOLUMADA
+                                    <a href="https://www.solumada.mg" target="__blank">SOLUMADA</a>
                                 </Timeline.Tag>
                                 <Paragraph>
                                     Nous développons en équipe une application en Node.js avec PDFTron, permettant de masquer des informations spécifiques dans des fichiers PDF, dans le cadre du Programme GDPR Phase 1.
@@ -50,7 +50,7 @@ const ExperimentSection = ({ className }: { className?: string }) => {
                                     <Timeline.Badge className="text-xs border-none bg-c-dark0 text-c-light">MongoDB</Timeline.Badge>
                                 </Timeline.Badges>
                                 <Timeline.Tag>
-                                    SOLUMADA
+                                    <a href="https://www.solumada.mg" target="__blank">SOLUMADA</a>
                                 </Timeline.Tag>
                                 <Paragraph>
                                     Développeur chez Solumada depuis janvier 2022, spécialisé dans le développement et l'optimisation d'applications, la digitalisation des processus internes, et la collaboration sur des projets communs en front-end.
@@ -92,7 +92,7 @@ const ExperimentSection = ({ className }: { className?: string }) => {
                         variant="fill"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 my-4"
+                        className="px-4 py-2 my-4"
                     >
                         <span>Voir mon CV</span>
                         <BsArrowRight size={20} />
@@ -104,17 +104,17 @@ const ExperimentSection = ({ className }: { className?: string }) => {
 
                     <LinkButton
                         href="/blog" // Remplace par l'URL de ton CV
+                        color="secondary"
                         variant="outline"
-                        target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 mt-4"
+                        className="px-4 py-2 mt-4"
                     >
                         <span>Voir mon Blog</span>
                         <BsArrowRight size={20} />
                     </LinkButton>
                 </div>
             </MaxWidthWrapper>
-        </div>
+        </section>
     )
 }
 

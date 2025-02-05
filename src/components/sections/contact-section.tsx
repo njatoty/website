@@ -8,7 +8,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const ContactSection = ({ className, }: { className?: string }) => {
     return (
-        <div className={cn('w-full flex-grow', className)}>
+        <section id='contact' className={cn('w-full flex-grow', className)}>
             <MaxWidthWrapper className='mx-auto'>
                 <div className="w-full">
                     <MutedTitle>Contact</MutedTitle>
@@ -62,7 +62,7 @@ const ContactSection = ({ className, }: { className?: string }) => {
                     </div>
                 </div>
             </MaxWidthWrapper>
-        </div>
+        </section>
     )
 }
 
