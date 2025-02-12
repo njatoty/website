@@ -4,9 +4,9 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 
 const WorkCard = ({ children, className }: { className?: string } & PropsWithChildren) => {
     return (
-        <div className={cn('flex flex-col overflow-hidden border rounded-lg border-c-gray-0 dark:border-c-dark0', className)}>
+        <article className={cn('flex flex-col overflow-hidden border rounded-lg border-c-gray-0 dark:border-c-dark0', className)}>
             {children}
-        </div>
+        </article>
     )
 }
 

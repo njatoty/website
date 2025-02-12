@@ -23,5 +23,8 @@
     a.active {
         @apply text-purple-500;
     }
+    .section-link.active {
+        @apply !font-bold !text-purple-500 underline underline-offset-4;
+    }
 
 }

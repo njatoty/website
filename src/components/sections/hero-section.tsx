@@ -45,14 +45,7 @@ const HeroSection = ({ className }: { className?: string }) => {
                         </p>
                     </div>
                     <div className="flex items-center justify-center flex-1">
-                        <div
-                            className="p-10 text-purple-300 text-7xl aspect-square w-52 lg:w-80"
-                            style={{
-                                background: 'url("./favicon.png")',
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
-                            }}
-                        />
+                        <img src={'/favicon.svg'} className="w-3/4 max-w-sm aspect-square" />
                     </div>
                 </div>
 

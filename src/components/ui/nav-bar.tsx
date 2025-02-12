@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn } from '../../utils';
 import ThemeToggle from '../theme-toggle';
-import Button from './buttons';
 import { Link, Button as RCButton } from 'react-scroll';
 
 type NavigationBarProps = React.HTMLAttributes<HTMLElement> & { activeMenu?: string };
@@ -28,7 +27,7 @@ const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
         <nav ref={ref} className={cn('flex items-center justify-between w-full px-1 md:px-2 lg:px-3 py-2 border rounded-full', className)}>
             {/* Logo */}
             <div className='px-2 py-1 text-base font-extrabold rounded-sm lg:text-2xl text-c-light'>
-                <img src='./tiny-favicon.png' className='w-7 md:w-8 lg:w-14' />
+                <img src='/tiny-favicon.png' className='w-7 md:w-8 lg:w-14' />
             </div>
 
             {/* Menu */}
