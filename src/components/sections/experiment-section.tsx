@@ -88,7 +88,7 @@ const ExperimentSection = ({ className }: { className?: string }) => {
                     <Paragraph>Consultez mon CV pour plus de détails sur mon parcours et mes compétences.</Paragraph>
 
                     <LinkButton
-                        href="/cv-njato.pdf" // Remplace par l'URL de ton CV
+                        href="/cv/my-cv.pdf" // Remplace par l'URL de ton CV
                         variant="fill"
                         target="_blank"
                         rel="noopener noreferrer"

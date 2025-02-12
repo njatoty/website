@@ -11,31 +11,31 @@ const dynamic_projects = [
         image: "./projects/dynamic/fastinfo.png",
         title: "Application Web avec Next.js",
         description: "Une application web pour gérer des stocks et suivre des revenus.",
-        techs: ["Next.js", "Prisma", "SQLite", "Redux"],
+        techs: ["Next.js", "Typescript", "Prisma", "SQLite", "Redux"],
     },
     {
         image: "./projects/dynamic/serasera.png",
         title: "Plateforme de ventes en ligne",
         description: "Plateforme e-commerce avec panier et paiement sécurisé via Stripe.",
-        techs: ["Next.js", "Prisma", "Redux", "PostgreSQL", "Stripe"],
+        techs: ["Next.js", "Typescript", "Prisma", "Redux", "PostgreSQL", "Stripe"],
     },
     {
         image: "./projects/dynamic/cotram.png",
         title: "Application desktop avec Electron",
         description: "Une application pour gérer les colis et générer des reçus facilement.",
-        techs: ["Electron", "React", "Prisma", "SQLite"],
+        techs: ["Electron", "React", "Typescript", "Prisma", "SQLite"],
     },
     {
         image: "./projects/dynamic/diagno.png",
         title: "Application desktop avec Electron",
         description: "Enregistrement des patients et suivi de leurs diagnostics médicaux.",
-        techs: ["Electron", "React", "Prisma", "Material-UI", "SQLite"],
+        techs: ["Electron", "React", "Typescript", "Prisma", "Material-UI", "SQLite"],
     },
     {
         image: "./projects/dynamic/scheduler.jpeg",
         title: "Application web avec Node.js",
         description: "Gestionnaire des événements et planificateur des plannings intuitif.",
-        techs: ["HTML", "CSS", "Nodejs", "MongoDB", "Toast-UI"],
+        techs: ["HTML", "CSS", "Javascript", "Nodejs", "MongoDB", "Toast-UI"],
     },
 ];
 
