@@ -1,5 +1,6 @@
 import CodeViewer from '@/components/ui/code-viewer';
 import Jumbotron from '@/components/ui/jumbotron';
+import MaxWidthWrapper from '@/components/ui/max-width-wrapper';
 import { CorrectParagraph, HeadingTitle1, HeadingTitle2, HeadingTitle3, IncorrectParagraph, ListDisc, Paragraph, Problem, Solution, Specify } from '@/components/ui/typography';
 import React from 'react'
 import { FaReact } from 'react-icons/fa';
@@ -88,17 +89,17 @@ function QuizItem({ quiz }) {
 
     // Render multiple-choice quiz item
     if (quiz.type === 'multiple-choice') {
-        return <MultipleChoiceComponent quiz={quiz} />;
+        return <div>Render multiple-choice quiz</div>;
     }
 
     // Render boolean quiz item
     if (quiz.type === 'boolean') {
-        return <BooleanComponent quiz={quiz} />;
+        return <div>Render boolean quiz</div>;
     }
 
     // Render short-answer quiz item
     if (quiz.type === 'short-answer') {
-        return <ShortAnswerComponent quiz={quiz} />;
+        return <div>Render short-answer quiz</div>;
     }
 
     return null; // If the quiz type is unknown
@@ -123,19 +124,31 @@ export const ShortAnswerQuizItem = ({ quiz }) => {
     goodOCPQuizItem: `function QuizItem({ quiz }) {
     const ItemComponent = quizRenderer[quiz.type];
     return ItemComponent ? <ItemComponent quiz={quiz} /> : null;
-}`
+}`,
+    goodOCPDropdown: `// New component for type dropdown
+export const DropdownQuizItem = ({ item }) => {
+    return <div>Render dropdown quiz</div>;
+};`,
+    goodOCPRendererUpdate: `const quizRenderer = {
+    'multiple-choice': MultipleChoiceQuizItem,
+    'short-answer': ShortAnswerQuizItem,
+    'boolean': BooleanQuizItem,
+    'dropdown': DropdownQuizItem, // New type added without modifying QuizItem!
+};`
 }
 
 const ReactSolidPrinciple = () => {
     return (
         <div className='w-full'>
-            <Jumbotron className='w-full mb-7' tagIcon={<FaReact size={64} className='float-right' />}>
+            <Jumbotron className='w-full rounded-none' tagIcon={<FaReact size={64} className='float-right' />}>
                 <HeadingTitle1 className='mb-2 text-c-light'>Le principe du S.O.L.I.D</HeadingTitle1>
-                <HeadingTitle3 className='text-c-light'>Application du Principe SOLID sur un Projet <Specify>React</Specify>.</HeadingTitle3>
+                <HeadingTitle3 className='text-c-light'>
+                    Application du Principe SOLID sur un Projet <Specify>React</Specify>.
+                </HeadingTitle3>
             </Jumbotron>
-            <div className='flex items-start w-full'>
+            <MaxWidthWrapper className='flex items-start w-full mx-auto max-md:px-5'>
                 {/* menu or link */}
-                <div className="sticky z-40 flex-shrink-0 w-full px-2 text-sm top-24 max-w-48 max-md:hidden">
+                <div className="sticky z-40 flex-shrink-0 w-full px-3 text-sm py-7 top-[55.21px] max-w-48 max-md:hidden">
                     <ListDisc className='flex flex-col gap-3 list-decimal'>
                         {
                             menuList.map(menu => (
@@ -154,7 +167,7 @@ const ReactSolidPrinciple = () => {
                         }
                     </ListDisc>
                 </div>
-                <div className="flex-1 h-full md:px-8 md:border-l border-c-gray dark:border-c-dark0">
+                <div className="flex-grow w-full h-full py-8 md:px-8 md:border-l border-c-gray dark:border-c-dark0">
                     <div className="w-full">
                         <HeadingTitle1>Nous allons appliquer le Principe SOLID sur un Quiz.</HeadingTitle1>
                         <div className="flex flex-col gap-3 my-3">
@@ -190,7 +203,7 @@ const ReactSolidPrinciple = () => {
                             </Paragraph>
                         </div>
                         {/* PROBLEM VIOLATE SRP */}
-                        <div className="w-full">
+                        <div className="flex flex-col w-full">
                             <HeadingTitle3>
                                 <Problem>Problème:</Problem> Un composant de liste de quiz qui viole SRP
                             </HeadingTitle3>
@@ -228,7 +241,7 @@ const ReactSolidPrinciple = () => {
                                 </Paragraph>
                             </div>
 
-                            <div className="step-1">
+                            <div className="w-full">
                                 <Paragraph className='my-2'>
                                     Etape 1: Création d'un Custom Hook pour Data Fetching
                                 </Paragraph>
@@ -238,7 +251,7 @@ const ReactSolidPrinciple = () => {
                                 {/* End Showing good code for SRP Hook */}
                             </div>
 
-                            <div className="step-2">
+                            <div className="w-full">
                                 <Paragraph className='my-2'>
                                     Etape 2: Mettre à jour le Component QuizList pour se concentrer seulement sur le Rendu
                                 </Paragraph>
@@ -287,10 +300,7 @@ const ReactSolidPrinciple = () => {
                             </ListDisc>
 
                             <Paragraph className='my-2'>Une mise en œuvre naïve pourrait ressembler à ceci :</Paragraph>
-
-                            {/* Showing wrong code for OCP */}
                             <CodeViewer code={code.wrongOCP} />
-                            {/* End Showing wrong code for OCP */}
 
                             <div className="w-full my-2">
                                 <HeadingTitle3>
@@ -316,34 +326,33 @@ const ReactSolidPrinciple = () => {
                                 </Paragraph>
                             </div>
 
-                            <div className="step-1">
+                            <div className="w-full">
                                 <Paragraph className='my-2'>
                                     Etape 1: Création des components individuels
                                 </Paragraph>
-
-                                {/* Showing good code for OCP individual component*/}
                                 <CodeViewer code={code.goodOCPComponents} />
-                                {/* End Showing good code for OCP individual component */}
                             </div>
 
-                            <div className="step-2">
+                            <div className="w-full">
                                 <Paragraph className='my-2'>
                                     Etape 2: Créer un objet de rendu (Quiz renderer)
                                 </Paragraph>
-
-                                {/* Showing good code for OCP */}
                                 <CodeViewer code={code.goodOCPRenderer} />
-                                {/* End Showing good code for OCP */}
                             </div>
 
-                            <div className="step-2">
+                            <div className="block w-full">
                                 <Paragraph className='my-2'>
                                     Etape 3: Implémentation du component QuizItem
                                 </Paragraph>
-
-                                {/* Showing good code for OCP */}
                                 <CodeViewer code={code.goodOCPQuizItem} />
-                                {/* End Showing good code for OCP */}
+
+                                <Paragraph>Désormais, si nous devons prendre en charge un nouveau type de quiz (par exemple, Dropdown), nous n'avons plus besoin de <Specify>toucher au component QuizItem</Specify> !</Paragraph>
+
+                                <Paragraph className='mt-2'>1 - Création d'un component Dropdown</Paragraph>
+                                <CodeViewer code={code.goodOCPDropdown} />
+
+                                <Paragraph className='mt-2'>2 - Une simple mise à jour sur le "quizRenderer"</Paragraph>
+                                <CodeViewer code={code.goodOCPRendererUpdate} />
                             </div>
 
                             <div className="w-full my-2">
@@ -365,7 +374,7 @@ const ReactSolidPrinciple = () => {
                     </div>
 
                 </div>
-            </div>
+            </MaxWidthWrapper>
         </div>
     )
 }

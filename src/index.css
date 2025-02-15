@@ -27,4 +27,24 @@
         @apply !font-bold !text-purple-500 underline underline-offset-4;
     }
 
+    .code-wrapper {
+        overflow-x: auto; /* Enables horizontal scrolling */
+        width: 100%; /* Ensures full width */
+    }
+
+    .code-viewer {
+        @apply w-full text-sm;
+        white-space: pre !important; /* Prevents line breaks */
+        display: block;
+        min-width: 100%;
+        width: max-content;
+        overflow-x: auto !important;
+    }
+
+    .code-viewer pre {
+        @apply w-max min-w-full block;
+        white-space: pre !important; /* Forces non-wrapping */
+        overflow-x: auto !important; /* Ensures scroll */
+    }
+
 }
