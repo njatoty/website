@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import { cn } from '../../utils';
+import { Link } from 'react-router-dom';
 
 type ButtonProps = {
     variant?: 'outline' | 'fill'
@@ -29,7 +30,7 @@ type LinkButtonProps = {
     variant?: 'outline' | 'fill'
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps & { color?: 'primary' | 'secondary' }>(
-    ({ children, className, variant = 'outline', color = 'primary', ...props }, ref) => {
+    ({ children, className, href, variant = 'outline', color = 'primary', ...props }, ref) => {
         const buttonClassName = {
             outline: {
                 primary: "border-2 border-purple-500 text-purple-500 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-400 hover:bg-opacity-10 focus:border-purple-700 focus:text-purple-700 active:border-purple-800 active:text-purple-800 dark:border-purple-300 dark:text-purple-300 dark:hover:bg-purple-300",
@@ -42,7 +43,8 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps & { colo
         };
 
         return (
-            <a
+            <Link
+                to={href!}
                 {...props}
                 ref={ref}
                 className={cn(
@@ -52,7 +54,7 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps & { colo
                 )}
             >
                 {children}
-            </a>
+            </Link>
         );
     }
 );

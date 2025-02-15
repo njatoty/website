@@ -1,8 +1,6 @@
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { cn } from "../../utils";
 import { useInView } from "react-intersection-observer";
-import { FaArrowRightLong } from "react-icons/fa6";
-import Button from "./buttons";
 
 const Swiper = ({
     children,
@@ -50,9 +48,6 @@ const Swiper = ({
             >
                 {children}
             </div>
-            {/* <Button variant="outline" className="my-4 ml-auto">
-                <FaArrowRightLong />
-            </Button> */}
         </div>
     );
 };
