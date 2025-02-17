@@ -12,7 +12,7 @@ const BlogList = () => {
                 </Blogcard.Description>
                 <Blogcard.Footer className='mt-3'>
                     <Blogcard.Estimation>15 minutes</Blogcard.Estimation>
-                    <Blogcard.Date>07/14/2025</Blogcard.Date>
+                    <Blogcard.Date>07/02/2025</Blogcard.Date>
                 </Blogcard.Footer>
             </Blogcard>
         </div>
