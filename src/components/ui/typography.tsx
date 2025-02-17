@@ -22,6 +22,12 @@ export const StrongTitle = ({ children }: TypographyProps) => {
   )
 }
 
+export const HeadingTitle = ({ children, className }: TypographyProps) => {
+  return (
+    <h2 className={cn("text-3xl font-bold lg:text-4xl text-c-dark2 dark:text-c-light w-fit", className)}>{children}</h2>
+  )
+}
+
 export const HeadingTitle1 = ({ children, className }: TypographyProps) => {
   return (
     <h2 className={cn("text-2xl font-bold lg:text-3xl text-c-dark2 dark:text-c-light w-fit", className)}>{children}</h2>
@@ -37,6 +43,12 @@ export const HeadingTitle2 = ({ children, className }: TypographyProps) => {
 export const HeadingTitle3 = ({ children, className }: TypographyProps) => {
   return (
     <h2 className={cn("text-base font-bold lg:text-lg text-c-dark2 dark:text-c-light w-fit", className)}>{children}</h2>
+  )
+}
+
+export const HeadingTitle4 = ({ children, className }: TypographyProps) => {
+  return (
+    <h2 className={cn("text-sm font-bold lg:text-base text-c-dark2 dark:text-c-light w-fit", className)}>{children}</h2>
   )
 }
 

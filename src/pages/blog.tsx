@@ -1,5 +1,4 @@
 import ThemeToggle from "@/components/theme-toggle";
-import { PiArrowLeftLight } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
 
 function Blog() {
@@ -15,7 +14,6 @@ function Blog() {
 
                 <div className="flex items-stretch justify-end w-full gap-6 max-md:text-sm">
                     <Link to="/blog" className="p-1 cursor-pointer text-c-dark0 dark:text-c-gray hover:text-yellow-500 dark:hover:text-yellow-500">
-                        <PiArrowLeftLight size={24} className="inline mr-2" />
                         Liste de Blogs
                     </Link>
                     <Link to="/" className="p-1 cursor-pointer text-c-dark0 dark:text-c-gray hover:text-yellow-500 dark:hover:text-yellow-500">
