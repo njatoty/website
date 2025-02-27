@@ -201,6 +201,18 @@ interface MultipleChoiceQuizItem extends BaseQuizItem {
 interface ShortAnswerQuizItem extends BaseQuizItem {
     expectedAnswer: string,
 };`,
+    goodDIP1: `function createQuizItemComponent(type: string) {
+    const components: Record<string, React.FC<{ item: QuizItemType }>> = {
+        'multiple-choice': MultipleChoiceQuizItem,
+        'short-answer': ShortAnswerQuizItem,
+        'boolean': BooleanQuizItem,
+    };
+    return components[type] || DefaultQuizItem;
+};`,
+    goodDIP2: `function QuizItem({ item }: { item: { type: string } }) {
+    const ItemComponent = createQuizItemComponent(item.type);
+    return <ItemComponent item={item} />;
+};`,
 }
 
 const ReactSolidPrinciple = () => {
@@ -213,7 +225,7 @@ const ReactSolidPrinciple = () => {
                         Application du Principe SOLID sur un Projet <Specify>React</Specify>.
                     </HeadingTitle3>
                     <div className="flex flex-wrap items-center gap-2 mt-4 max-md:text-sm lg:gap-6 opacity-85">
-                        <WithDateLabel>07 Février 2025</WithDateLabel>
+                        <WithDateLabel>07 Février, 2025</WithDateLabel>
                         <WithArchiveLabel>ANDRIAMANIRISOA Njatotiana Fiononana</WithArchiveLabel>
                         <WithClockLabel>15 minutes</WithClockLabel>
                     </div>
@@ -271,7 +283,7 @@ const ReactSolidPrinciple = () => {
                         </div>
                     </div>
 
-                    <div id="srp" className='flex flex-col w-full gap-4 py-6'>
+                    <section id="srp" className='flex flex-col w-full gap-4 py-6'>
                         <div className="flex flex-col gap-3 my-2">
                             <HeadingTitle2>1. Single Responsibility Principle (SRP) in SOLID</HeadingTitle2>
                             <Paragraph>
@@ -352,9 +364,9 @@ const ReactSolidPrinciple = () => {
                                 </CorrectParagraph>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <div id="ocp" className='flex flex-col w-full gap-4 py-6'>
+                    <section id="ocp" className='flex flex-col w-full gap-4 py-6'>
                         <div className="flex flex-col gap-3 my-2">
                             <HeadingTitle2>2. Open/Close Principle</HeadingTitle2>
                             <Paragraph>
@@ -447,10 +459,10 @@ const ReactSolidPrinciple = () => {
                                 </Paragraph>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
 
-                    <div id="lsp" className='flex flex-col w-full gap-4 py-6'>
+                    <section id="lsp" className='flex flex-col w-full gap-4 py-6'>
                         <div className="flex flex-col gap-3 my-2">
                             <HeadingTitle2>3. Liskov Substitution Principle</HeadingTitle2>
                             <Paragraph>
@@ -548,9 +560,9 @@ const ReactSolidPrinciple = () => {
                                 </Paragraph>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <div id="isp" className='flex flex-col w-full gap-4 py-6'>
+                    <section id="isp" className='flex flex-col w-full gap-4 py-6'>
                         <div className="flex flex-col gap-3 my-2">
                             <HeadingTitle2>3. Interface Segregation Principle</HeadingTitle2>
                             <Paragraph>
@@ -628,11 +640,57 @@ const ReactSolidPrinciple = () => {
                                 </Paragraph>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
+                    <section id="dip" className='flex flex-col w-full gap-4 py-6'>
+                        <div className="flex flex-col gap-3 my-2">
+                            <HeadingTitle2>5. Dependency Inversion Principle</HeadingTitle2>
+                            <Paragraph>
+                                Le DIP signifie que les modules de haut niveau ne doivent pas depondres celles de bas niveau, mais tous deux doivent dépendre d'abstractions.
+                                <br />
+                                <br />
+                                En appliquant ce principe, nous devons éviter que <b>QuizItem</b> dépende directement de composants concrets comme <b>MultipleChoiceQuizItem</b>.
+                            </Paragraph>
+
+                            {/* SOLUTION FOR ISP */}
+                            <div className="w-full">
+                                <div className="flex flex-col gap-3 my-2">
+                                    <HeadingTitle3>
+                                        <Solution>SOLUTION:</Solution> Utilisation d'une couche d'abstraction.
+                                    </HeadingTitle3>
+                                </div>
+
+                                <div className="w-full">
+                                    <Paragraph className='my-2'>
+                                        Nous pouvons créer une fonction <b>createQuizItem</b> qui retourne dynamiquement le bon component en fonction d'une type.
+                                    </Paragraph>
+                                    <CodeViewer code={code.goodDIP1} />
+                                </div>
+
+                                <div className="w-full my-2">
+                                    <HeadingTitle3>
+                                        Pourquoi cette approche est-elle meilleure ?
+                                    </HeadingTitle3>
+
+                                    <CorrectParagraph>
+                                        Aucune omission de props obligatoires, empêchant les erreurs à l'exécution.
+                                    </CorrectParagraph>
+                                    <CorrectParagraph>
+                                        Favorise une conception plus modulaire et évolutive.
+                                    </CorrectParagraph>
+                                    <CorrectParagraph>
+                                        Respecte le principe ISP et améliore la maintenabilité.
+                                    </CorrectParagraph>
+                                    <Paragraph className='my-2 italic'>
+                                        Avec cette approche, nous nous assurons que chaque composant de quiz ne dépend que des propriétés nécessaires et ne contient pas de code inutile.
+                                    </Paragraph>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </MaxWidthWrapper>
-        </div>
+            </MaxWidthWrapper >
+        </div >
     )
 }
 

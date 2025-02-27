@@ -33,7 +33,7 @@ Timeline.Date = ({ children, className }: TimelineProps) => {
 
 Timeline.Title = ({ children, className }: TimelineProps) => {
     return (
-        <h3 className={cn('text-purple-500 font-bold w-fit', className)}>
+        <h3 className={cn('text-violet-500 font-bold w-fit', className)}>
             {children}
         </h3>
     )

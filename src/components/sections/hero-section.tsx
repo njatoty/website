@@ -16,7 +16,7 @@ const GradientButton = ({
             {
                 Icon &&
                 <div className="flex items-center justify-center col-span-1 p-3">
-                    <Icon size={32} className="flex-1 flex-shrink-0 text-purple-400" />
+                    <Icon size={32} className="flex-1 flex-shrink-0 text-violet-400" />
                 </div>
             }
             <div className="flex flex-col items-start justify-center h-full col-span-2">
@@ -37,10 +37,10 @@ const HeroSection = ({ className }: { className?: string }) => {
                     <div className="flex flex-col justify-center flex-1 w-full">
                         <h1 className='flex flex-col gap-2 text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl text-slate-900 dark:text-slate-200 max-md:text-center'>
                             <span>Bonjour,</span>
-                            <span>Je suis <span className='text-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-purple-500 bg-clip-text'>Njatotiana</span>,</span>
+                            <span>Je suis <span className='text-transparent bg-gradient-to-br from-pink-400 via-violet-500 to-violet-500 bg-clip-text'>Njatotiana</span>,</span>
                             <span className='font-light max-md:text-center text-c-dark0 dark:text-c-gray'>Développeur Web Fullstack React/Node</span>
                         </h1>
-                        <p className="max-w-md p-3 my-2 border-l-4 border-purple-400 dark:border-purple-900 lg:p-4 text-c-dark0 dark:text-c-gray max-md:text-center max-md:mx-auto max-md:border-none">
+                        <p className="max-w-md p-3 my-2 border-l-4 border-violet-400 dark:border-violet-900 lg:p-4 text-c-dark0 dark:text-c-gray max-md:text-center max-md:mx-auto max-md:border-none">
                             Je conçois et code des choses mangifiquement simples. Je suis passionné par mon travail.
                         </p>
                     </div>

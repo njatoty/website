@@ -46,7 +46,7 @@ function Portfolio() {
 
             {/* shadow */}
             <div aria-hidden="true" className='fixed right-0 inset-y-0 h-[300px] w-[200px] bg-gradient-to-b from-pink-500 to-indigo-600 blur-3xl opacity-25 -rotate-45 scale-150' />
-            <div aria-hidden="true" className='absolute left-20  inset-y-0 h-[150px] w-[150px] bg-gradient-to-b from-purple-500 to-purple-600 blur-3xl opacity-35 -rotate-40 scale-150' />
+            <div aria-hidden="true" className='absolute left-20  inset-y-0 h-[150px] w-[150px] bg-gradient-to-b from-violet-500 to-violet-600 blur-3xl opacity-35 -rotate-40 scale-150' />
         </>
     )
 }

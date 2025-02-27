@@ -14,7 +14,6 @@ function Layout() {
 
             {/* Footer section */}
             <FooterSection className='' />
-
         </div >
     )
 }
