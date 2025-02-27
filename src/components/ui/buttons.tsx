@@ -33,11 +33,11 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps & { colo
     ({ children, className, href, variant = 'outline', color = 'primary', ...props }, ref) => {
         const buttonClassName = {
             outline: {
-                primary: "border-2 border-purple-500 text-purple-500 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-400 hover:bg-opacity-10 focus:border-purple-700 focus:text-purple-700 active:border-purple-800 active:text-purple-800 dark:border-purple-300 dark:text-purple-300 dark:hover:bg-purple-300",
+                primary: "border-2 border-violet-500 text-violet-500 hover:text-violet-600 hover:border-violet-600 hover:bg-violet-400 hover:bg-opacity-10 focus:border-violet-700 focus:text-violet-700 active:border-violet-800 active:text-violet-800 dark:border-violet-300 dark:text-violet-300 dark:hover:bg-violet-300",
                 secondary: "border-2 border-c-dark0 text-c-dark0 hover:text-c-light hover:bg-c-dark1 focus:border-slate-700 focus:text-slate-700 active:border-slate-800 active:text-slate-800 dark:border-c-gray dark:text-c-gray dark:hover:bg-c-dark1 dark:hover:text-c-light"
             },
             fill: {
-                primary: "bg-purple-500 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-purple-600 focus:bg-purple-800 active:bg-purple-700",
+                primary: "bg-violet-500 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-violet-600 focus:bg-violet-800 active:bg-violet-700",
                 secondary: "bg-slate-500 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] hover:bg-slate-600 focus:bg-slate-800 active:bg-slate-700"
             }
         };

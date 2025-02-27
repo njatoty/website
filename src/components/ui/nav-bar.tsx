@@ -35,7 +35,7 @@ const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
                 <ul className="flex items-center justify-center flex-1 gap-3 md:justify-end lg:gap-4">
                     {
                         menuData.map((menuItem, index) => (
-                            <li key={index} className='text-sm cursor-pointer text-c-dark0 dark:text-c-gray dark:hover:text-purple-500 hover:text-purple-500 md:text-base lg:text-lg text-nowrap'>
+                            <li key={index} className='text-sm cursor-pointer text-c-dark0 dark:text-c-gray dark:hover:text-violet-500 hover:text-violet-500 md:text-base lg:text-lg text-nowrap'>
                                 <Link
                                     to={menuItem.link}
                                     smooth spy offset={-30}
@@ -51,11 +51,11 @@ const NavigationBar = React.forwardRef<HTMLElement, NavigationBarProps>(({
 
                 {/* Toggle Theme Button */}
                 <div className='pl-1 md:pl-2 lg:pl-4'>
-                    <ThemeToggle className='w-8 h-8 text-purple-500 md:w-10 md:h-10 aspect-square active:text-purple-800' iconSize={20} />
+                    <ThemeToggle className='w-8 h-8 text-violet-500 md:w-10 md:h-10 aspect-square active:text-violet-800' iconSize={20} />
                 </div>
 
                 <div className="pl-1 md:pl-2 lg:pl-4">
-                    <RCButton to='contact' smooth type='button' className='px-3 py-2 text-sm transition-all duration-100 ease-in border rounded-full lg:block lg:text-base max-md:hidden border-c-gray-0 bg-c-light text-c-dark0 dark:border-c-dark0 dark:bg-c-dark1 dark:text-c-light dark:hover:bg-c-dark0'>
+                    <RCButton to='contact' smooth type='button' className='px-3 py-2 text-sm transition-all duration-100 ease-in border rounded-full lg:block lg:text-base max-md:hidden border-c-gray-0 bg-c-light text-c-dark0 dark:border-c-dark0 dark:bg-c-dark1 dark:text-c-light dark:hover:bg-c-dark0 dark:active:bg-c-dark2 hover:bg-c-gray-0 hover:border-c-gray'>
                         Collaborons
                     </RCButton>
                 </div>

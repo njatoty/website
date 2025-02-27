@@ -19,7 +19,7 @@ const AboutSection = ({ className }: { className?: string }) => {
                             Moi, c'est <span className="font-semibold">ANDRIAMANIRISOA Njatotiana Fiononana</span>, un développeur web passionné par la création de solutions innovantes. Fort d'une expertise en frontend et backend, je transforme des idées en solutions digitales efficaces et adaptées aux besoins des utilisateurs.
                         </Paragraph>
                         <div className="flex-col items-center justify-center hidden w-full gap-2 my-6">
-                            <div className="img max-w-[250px]  dark:border-purple-600/40 border-c-gray-0 relative w-full aspect-square dark:bg-c-dark2 overflow-hidden">
+                            <div className="img max-w-[250px]  dark:border-violet-600/40 border-c-gray-0 relative w-full aspect-square dark:bg-c-dark2 overflow-hidden">
                                 <img src="/profile/me.png" alt="me" className="absolute object-cover w-full scale-125 dark:mix-blend-lighten mix-blend-darken aspect-square dark:bg-c-dark3" />
                             </div>
                         </div>

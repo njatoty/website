@@ -10,7 +10,7 @@ const AboutCard = ({ children }: PropsWithChildren) => {
 
 AboutCard.Icon = ({ children }: PropsWithChildren) => {
     return (
-        <div className="flex items-center justify-center p-3 border-2 border-purple-500 text-c-dark2 dark:text-c-light aspect-square w-fit">
+        <div className="flex items-center justify-center p-3 border-2 border-violet-500 text-c-dark2 dark:text-c-light aspect-square w-fit">
             {children}
         </div>
     )

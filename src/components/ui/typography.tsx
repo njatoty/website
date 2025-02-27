@@ -17,7 +17,7 @@ export const StrongTitle = ({ children }: TypographyProps) => {
   return (
     <div className="max-w-fit">
       <h2 className="text-2xl font-bold lg:text-3xl text-c-dark2 dark:text-c-light">{children}</h2>
-      <div className="w-1/3 h-1 my-4 bg-purple-500" />
+      <div className="w-1/3 h-1 my-4 bg-violet-500" />
     </div>
   )
 }
